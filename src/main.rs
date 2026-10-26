@@ -62,7 +62,7 @@ mod app {
         let mut count = 0u32;
         loop {
             cx.local.led.toggle();
-            Systick::delay(1000.millis()).await;
+            Systick::delay(50.millis()).await;
 
             log::info!("Hello from your Teensy 4! The count is {count}");
             if count.is_multiple_of(7) {
